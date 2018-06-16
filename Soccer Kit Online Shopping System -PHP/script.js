@@ -1,0 +1,23 @@
+// JavaScript Document
+function calendar(){
+	 var day=['Sunday','Monday','Tuesday','Wednesday',"Thursday","Friday",'Saturday'];
+	 var month=['Jan','Feb','Mar','April','May','Jun','Jul','Aug','Sept','Oct','Nov','Dec'];
+	 var d=new Date();
+	 setText('calendar-day', day[d.getDay()]);
+	 setText('calendar-date', d.getDate());
+	 setText('calendar-month-year', month[d.getMonth()]+''+(1900+d.getYear()));
+	 
+	};
+
+function setText(id, val){
+	if(val <10){
+		val = '0' + val;
+	}
+	document.getElementById(id).innerHTML = val;
+	
+};
+
+window.onload = calendar;
+
+
+
